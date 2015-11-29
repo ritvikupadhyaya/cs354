@@ -1,0 +1,157 @@
+Name (and partner's name): Parth Kejriwal, Ritvik Upadhyaya
+Section (and partner's section): 2, 2
+
+Assignment 4 questions.
+Do not remove the questions from this file.
+Please indent your answers.
+
+For ALL cache simulations, use a capacity of 16384 bytes for both 
+the I-cache and the D-cache.
+
+cache1D
+-------
+
+Describe how you tested your code to verify that it works.
+	Output each array element( or every 100/ random number of elements) after arr[i] = i. 
+	Using gdb, setting breakpoints and checking values
+	of array elements will also work.
+
+What do you get from running pin with a block size of 4 bytes?
+	Instruction cache misses: 5994
+	Instruction cache references: 695569
+	Data cache misses: 108332
+	Data cache references: 646507
+
+What is the hit ratio for the I-cache with a block size of 4 bytes?
+	Hit Ratio = number of hits/ number of references
+			= (#references - #misses)/# references
+			= (695569 - 5994)/ 695569
+			= 0.9913
+
+What is the hit ratio for the D-cache with a block size of 4 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (646507 - 108332)/ 646507
+			= 0.8324
+	
+What do you get from running pin with a block size of 32 bytes?
+	Instruction cache misses: 1167
+	Instruction cache references: 695569
+	Data cache misses: 14982
+	Data cache references: 646507
+
+What is the hit ratio for the I-cache with a block size of 32 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (695569 - 1167)/ 695569
+			= 0.9983
+
+What is the hit ratio for the D-cache with a block size of 32 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (646507 - 14982)/ 646507
+			= 0.9768
+
+What do you get from running pin with a block size of 64 bytes?
+	Instruction cache misses: 712
+	Instruction cache references: 695569
+	Data cache misses: 8452
+	Data cache references: 646507
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (695569 - 712)/ 695569
+			= 0.9989
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (646507 - 8452) / 646507
+			= 0.9869
+
+Which block size is best for the I-cache?  Why?
+	64 byte block size is the best for the I-cache as the 
+	hit ratio is the highest for the 64 byte block. This 
+	means that the misses were less frequent making it more 
+	efficient.
+
+
+Which block size is best for the D-cache?  Why? In what way does the block 
+  size affect the hit ratio for this program?
+	64 byte block size is the best for D-cache as the hit 
+	ratio is the highest for the 64 byte block. 
+	The high hit ratio implies that the misses were less 
+	frequent resulting in a more efficient byte block size. 
+	As compared to other block sizes, 64 bytes block size has 
+	lower number of conflict memory due to the larger space available. 
+	So based on the size of block, the conflict misses will vary. Smaller 
+	block size having more conflict misses and larger block 
+	size having lower frequency of conflict misses resulting 
+	in different hit ratios.
+
+cache2Drows
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+	Instruction cache misses: 708
+	Instruction cache references:16616589
+	Data cache misses: 106952     
+	Data cache references:12061510 
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= ( 16616589 - 708)/ 16616589
+			= 0.99995
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= ( 12061510 - 106952) / 12061510
+			= 0.99113
+
+cache2Dcols
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+	Instruction cache misses: 703
+	Instruction cache references: 16599089
+	Data cache misses: 1507413     
+	Data cache references:12049010  
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= (16599089 - 703)/ 16599089
+			= 0.99995
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+	Hit Ratio = #hits/ # references
+			= (#references - #misses)/#references
+			= ( 12049010 - 1507413)/ 12049010
+			= 0.87489
+
+Comparison of cache2Drows and cache2Dcols
+-----------------------------------------
+
+Compare the performance (hit ratios) of the I-cache for these 2 programs.
+Justify your statistics.
+	The hit ratios are the same for both the I- cache. 
+	This is because the implementation of both the 2 types 
+	of 2-D arrays affect the data and not the actual 
+	instructions. Hence the similar hit ratio is expected 
+	for both the 2-d arrays.
+
+Compare the performance (hit ratios) of the D-cache for these 2 programs.
+Explain any differences.
+	The hit ratios of the D-cache is higher for the cache2Drows program. 
+	This is because of the fact that C has a row major 
+	implementation which makes cache2Drows 
+	have a better performance. Row major implies that 
+	the data is in spatial locality, i.e placed closer for the same 
+	row. Hence resulting in the higher D-cache hit 
+	ratio for the cache2Drows program.
+
+
+

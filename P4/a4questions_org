@@ -1,0 +1,81 @@
+Name (and partner's name):
+Section (and partner's section):
+
+Assignment 4 questions.
+Do not remove the questions from this file.
+Please indent your answers.
+
+For ALL cache simulations, use a capacity of 16384 bytes for both 
+the I-cache and the D-cache.
+
+cache1D
+-------
+
+Describe how you tested your code to verify that it works.
+
+
+What do you get from running pin with a block size of 4 bytes?
+	Instruction cache misses:	701
+	Instruction cache references:	695554
+	Data cache misses:		8538
+	Data cache references:		646501
+
+What is the hit ratio for the I-cache with a block size of 4 bytes?
+	Hit ratio = #hits/#references
+		    	= (#references - #misses)/ #references
+			= (695554 - 701)/695554
+			= 0.998992:1
+
+What is the hit ratio for the D-cache with a block size of 4 bytes?
+	Hit ratio = #hits/#references
+		    	= (#references - #misses)/ #references
+			= (646501 - 8538)/646501
+			= 0.986793:1
+
+What do you get from running pin with a block size of 32 bytes?
+
+What is the hit ratio for the I-cache with a block size of 32 bytes?
+
+What is the hit ratio for the D-cache with a block size of 32 bytes?
+
+What do you get from running pin with a block size of 64 bytes?
+
+What is the hit ratio for the I-cache withw
+ a block size of 64 bytes?
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+
+Which block size is best for the I-cache?  Why?
+
+Which block size is best for the D-cache?  Why? In what way does the block 
+  size affect the hit ratio for this program?
+  
+
+cache2Drows
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+
+cache2Dcols
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+
+
+Comparison of cache2Drows and cache2Dcols
+-----------------------------------------
+
+Compare the performance (hit ratios) of the I-cache for these 2 programs.
+Justify your statistics.
+
+Compare the performance (hit ratios) of the D-cache for these 2 programs.
+Explain any differences.
+
