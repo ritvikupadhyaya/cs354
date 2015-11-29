@@ -1,2 +1,2 @@
-# cs354
-The programming assignments and solution for CS-354: Machine Organization and Programming taken at UW-Madison with Karen Miller in Spring 2015.
+# CS354 - Machine Organization and Programming
+The programming assignments and solution for cs 354 taken at UW-Madison with Karen Miller in Spring 2015.
