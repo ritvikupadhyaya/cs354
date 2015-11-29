@@ -1,5 +1,5 @@
 # CS354 - Machine Organization and Programming
-The programming assignments and solution for cs 354 taken at UW-Madison with Karen Miller in Spring 2015.<br>
+The programming assignments and solution for cs 354 taken at University of Wisconsin-Madison with Karen Miller in Spring 2015.<br>
 Course Description can be found [here!][Class Link]<br>
 Links to the programming assignments:<br>
   * [P1](http://pages.cs.wisc.edu/~smoler/cs354/cs354/homeworks/a1.html)<br>
